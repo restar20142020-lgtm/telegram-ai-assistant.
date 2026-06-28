@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-ai-assistant
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your_token_here
+      - key: OPENAI_API_KEY
+        value: your_openai_key_here
